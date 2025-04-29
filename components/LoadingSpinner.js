@@ -1,6 +1,7 @@
 // LoadingSpinner.js
 import React from 'react';
-import './LoadingSpinner.css'; // Pastikan untuk membuat file CSS untuk styling
+import styles from './LoadingSpinner.module.css';
+import './LoadingSpinner.module.css';
 
 const LoadingSpinner = () => {
     return (

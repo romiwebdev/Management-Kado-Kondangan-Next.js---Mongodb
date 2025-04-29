@@ -1,5 +1,6 @@
 import "@/styles/globals.css";
 import { GeistSans, GeistMono } from 'geist/font';
+import '../styles/LoadingSpinner.css';
 
 export default function App({ Component, pageProps }) {
   return (
