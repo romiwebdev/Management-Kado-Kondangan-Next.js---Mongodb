@@ -1,7 +1,6 @@
 // components/ProtectedRoute.js
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import LoadingSpinner from './LoadingSpinner'; // Buat komponen loading sederhana
 
 export default function ProtectedRoute({ children }) {
   const router = useRouter();
@@ -27,8 +26,13 @@ export default function ProtectedRoute({ children }) {
   }, [router]);
 
   if (isLoading) {
-    return <LoadingSpinner />;
+    return (
+      <div style={{ textAlign: 'center', marginTop: '20%' }}>
+        <p>Memeriksa autentikasi...</p>
+      </div>
+    );
   }
+  
 
   return isAuthenticated ? children : null;
 }
